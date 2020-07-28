@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import { logInUser } from '../../API';
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+
 
 export default class Login extends Component {
     state = {
@@ -25,31 +28,36 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className='text-align'>
-                <h2>Login</h2>
-                <div className='Login'>
-                    <form onSubmit={this.handleSubmit}>
-                    <label>Username</label>
-                        <input
-                            id="username"
-                            onChange={this.handleInputChange}
-                            value={this.state.username}
-                            placeholder='Username'
-                        />
-                    <br></br>
-                    <label>password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        onChange={this.handleInputChange}
-                        value={this.state.password}
-                        placeholder='password'
-                    />
-                    <br></br>
-                    <button type='submit'>Submit</button>
-                    </form>
-                </div>
-            </div>
+    
+        <div class="container login-container center ">
+        {this.props.user.username ? <Redirect push to="/events"/> : null}
+                    <div class="row">
+                        <div class="col-md-12 login-form-1 text-align mb-3 ">
+                            <h3 className="whiteTextOverride">login </h3>
+                            <form onSubmit={this.handleSubmit}>
+                                <div class="form-group">
+                                    <input  type="text" class="form-control" placeholder="Your Username" 
+                                    id="username"
+                                    onChange={this.handleInputChange}
+                                    value={this.state.username}
+                                    placeholder='Username' />
+                                </div>
+                                <div class="form-group">
+                                    <input  class="form-control" placeholder="Your Password " 
+                                        type="password"
+                                        id="password"
+                                        onChange={this.handleInputChange}
+                                        value={this.state.password}
+                                        placeholder='password' />
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btnSubmit" value="Login" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>    
+                    </div>
         )
     }
 }
+

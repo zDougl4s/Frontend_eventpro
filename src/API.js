@@ -1,5 +1,4 @@
-const BASE_URL = "http://localhost:3002"
-const UPDATE_DETAILS_URL = `${BASE_URL}/updatedetails/`
+
 
 export const logInUser = (userData, setUser) => {
     fetch("http://localhost:3002/login", {
@@ -7,7 +6,7 @@ export const logInUser = (userData, setUser) => {
         headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
-        },
+        }, 
         body: JSON.stringify({ user: userData }),
         })
         .then((res) => res.json())
@@ -18,7 +17,7 @@ export const logInUser = (userData, setUser) => {
         })
 }
 
-export const createNewUser = (userData) => {
+export const createNewUser = (userData,setUser) => {
     fetch("http://localhost:3002/users", {
         method: "POST",
         headers: {
@@ -31,7 +30,11 @@ export const createNewUser = (userData) => {
         .then((res) => {
             localStorage.setItem("jwt", res.jwt);
             return res;
-        }).then((data) => console.log(data))
+        }).then(res => {
+            setUser(res.user)
+            return res;
+        })
+        .then((data) => console.log(data))
 }
 
 export const updateUser = (id, body, setUser) => {
@@ -47,23 +50,9 @@ export const updateUser = (id, body, setUser) => {
     .then(setUser)
 }
 
-const post = (url, body) => {
-    const configObject = {
-        method: "POST",
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            // "Authorization": localStorage.token
-
-        },
-        body: JSON.stringify(body)
-    }
-    return fetch(url, configObject)
-}
 
 const getToken = () => localStorage.getItem("jwt");
 
-const getUser = () => JSON.parse(atob(this.getToken().split(".")[1]));
 
 export const validateToken = () => {
     return fetch("http://localhost:3002/validate", {
@@ -75,7 +64,7 @@ export const validateToken = () => {
 }
 
 
-export const updateDetails = body => post(UPDATE_DETAILS_URL, body).then(res => res.json())
+// export const updateDetails = body => post(UPDATE_DETAILS_URL, body).then(res => res.json())
 
 export const buyTicket = (userId, eventId) => {
     fetch("http://localhost:3002/tickets", {
@@ -89,3 +78,26 @@ export const buyTicket = (userId, eventId) => {
     .then((res) => res.json())
     .then(console.log)
 }
+
+export const userTickets = (userId) => { fetch('http://localhost:3002/tickets')
+        .then((data) => data.json())
+.then((res) => {
+            return res;
+        })
+.then((data) =>data.filter(ticket => ticket.user_id === userId))
+}
+
+export const eventById = (id) => {
+    fetch(`http://localhost:3002/events/${id}`)
+        .then((data) => data.json())
+        .then((res) => {
+            return res;
+        })
+}
+
+export const fetchDeleteTicket = (id) => {
+    return fetch(`http://localhost:3002/tickets/${id}`, {
+        method: 'DELETE'
+    })
+    .then(res => res.json());
+};

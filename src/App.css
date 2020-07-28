@@ -1,6 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+body{
+  
+}
+
 .text-align{
   text-align: center;
 }
 .nav{
-  background-color: #1EF7C2;
+  background-color: #009edf;
+  ;
+}
+/* GENERAL CLASSES */
+.float-l{
+  float: left;
+}
+
+.float-r{
+  float: right;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.mar-t-8{
+  margin-top: 8px;
+}
+
+.mar-t-50{
+  margin-top: 50px;
+}
+.mar-t-100{
+  margin-top: 100px;
+}
+
+.mar-r-20{
+  margin-right: 20px;
+}
+
+.mar-r-150{
+  margin-right: 150px;
+}
+
+.mar-b-100{
+  margin-bottom: 100px;
+}
+
+/* 1) NAVBAR */
+
+.nav-back-color{
+  background-color: #009edf;
+}
+
+.username{
+  border: 1px solid rgba(249, 244, 244, 0);
+  height: 10px;
+  width: 10px;
+  padding: 8px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 50px !important;
+  margin: 20px;
+  border-radius: 3px;
+  border-color: rgb(249, 248, 248);
+}
+
+/* EVENTS */
+
+.card-width{
+  width: 18rem;
+}
+
+.card{
+  width: 400px;
+  height: 700px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.img-size{
+  width: 398px;
+  height: 398px;
+}
+ 
+/* login form */
+
+.login-container{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.login-form-1{
+  padding: 5%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+  text-align: center;
+  color: #333;
+}
+.login-form-2{
+  padding: 5%;
+  /* background: #0062cc; */
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-container form{
+  padding: 10%;
+}
+.btnSubmit
+{
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+  font-weight: 600;
+  color: #fff;
+  background-color: #0062cc;
+  
+}
+
+
+center {
+  margin: auto;
+  width: 50% ;
+  padding: 10px;
+}
+
+/* register form  */
+
+#playground-container {
+  height: 500px;
+  overflow: hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+body, html{
+   height: 100%;
+ background-repeat: no-repeat;
+ background:url(https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+ font-family: 'Oxygen', sans-serif;
+    background-size: cover;
+}
+
+.main{
+ margin:50px 15px;
+}
+
+h1.title { 
+font-size: 50px;
+font-family: 'Passion One', cursive; 
+font-weight: 400; 
+}
+
+hr{
+width: 10%;
+color: #fff;
+}
+
+.form-group{
+margin-bottom: 15px;
+}
+
+label{
+margin-bottom: 15px;
+}
+
+.h3{
+  color: rgb(252, 252, 252);
+}
+
+.whiteTextOverride
+{
+ color: white !important;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 11px;
+  padding-top: 3px;
+}
+
+.main-login{
+ background-color: #fff;
+  /* shadows and rounded borders */
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+.form-control {
+  height: auto!important;
+padding: 8px 12px !important;
+}
+.input-group {
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.21)!important;
+}
+#button {
+  border: 1px solid #ccc;
+  margin-top: 28px;
+  padding: 6px 12px;
+  color: #666;
+  text-shadow: 0 1px #fff;
+  cursor: pointer;
+  -moz-border-radius: 3px 3px;
+  -webkit-border-radius: 3px 3px;
+  border-radius: 3px 3px;
+  -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  box-shadow: 0 1px #fff inset, 0 1px #ddd;
+  background: #f5f5f5;
+  background: -moz-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(100%, #eeeeee));
+  background: -webkit-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: -o-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: -ms-linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  background: linear-gradient(top, #f5f5f5 0%, #eeeeee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+}
+.main-center{
+ margin-top: 30px;
+ margin: 0 auto;
+ max-width: 400px;
+  padding: 10px 40px;
+background:#009edf;
+    color: #FFF;
+  text-shadow: none;
+-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+span.input-group-addon i {
+  color: #009edf;
+  font-size: 17px;
+}
+
+.login-button{
+margin-top: 5px;
+}
+
+.login-register{
+font-size: 11px;
+text-align: center;
+}
+
+/* mytickets */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+*
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box
+}
+
+body
+{
+  background-color: #dadde6;
+  font-family: arial
+}
+
+.fl-left{float: left}
+
+.fl-right{float: right}
+
+.container
+{
+  width: 90%;
+  margin: 100px auto
+}
+
+h1
+{
+  text-transform: uppercase;
+  font-weight: 900;
+  border-left: 10px solid #fec500;
+  padding-left: 10px;
+  margin-bottom: 30px
+}
+
+.row{overflow: hidden}
+
+.card
+{
+  display: table-row;
+  width: 49%;
+  background-color: #fff;
+  color: #e22727;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  border-radius: 4px;
+  position: relative
+}
+
+.card + .card{margin-left: 2%}
+
+.date
+{
+  display: table-cell;
+  width: 25%;
+  position: relative;
+  text-align: center;
+  border-right: 2px dashed #dadde6
+}
+
+.date:before,
+.date:after
+{
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #DADDE6;
+  position: absolute;
+  top: -15px ;
+  right: -15px;
+  z-index: 1;
+  border-radius: 50%
+}
+
+.date:after
+{
+  top: auto;
+  bottom: -15px
+}
+
+.date time
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+.date time span{display: block}
+
+.date time span:first-child
+{
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 250%
+}
+
+.date time span:last-child
+{
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: -10px
+}
+
+.card-cont
+{
+  display: table-cell;
+  width: 75%;
+  font-size: 85%;
+  padding: 10px 10px 30px 50px
+}
+
+.card-cont h3
+{
+  color: #3C3C3C;
+  font-size: 130%
+}
+
+.row:last-child .card:last-of-type .card-cont h3
+{
+  text-decoration: line-through
+}
+
+.card-cont > div
+{
+  display: table-row
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i,
+.card-cont .even-date time,
+.card-cont .even-info p
+{
+  display: table-cell
+}
+
+.card-cont .even-date i,
+.card-cont .even-info i
+{
+  padding: 5% 5% 0 0
+}
+
+.card-cont .even-info p
+{
+  padding: 30px 50px 0 0
+}
+
+.card-cont .even-date time span
+{
+  display: block
+}
+
+.card-cont a
+{
+  display: block;
+  text-decoration: none;
+  width: 80px;
+  height: 30px;
+  background-color: #f3f5f5;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 2px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px
+}
+
+.row:last-child .card:first-child .card-cont a
+{
+  background-color: #037FDD
+}
+
+.row:last-child .card:last-child .card-cont a
+{
+  background-color: #F8504C
+}
+
+@media screen and (max-width: 860px)
+{
+  .card
+  {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px
+  }
+  
+  .card + .card{margin-left: 0}
+  
+  .card-cont .even-date,
+  .card-cont .even-info
+  {
+    font-size: 75%
+  }
 }

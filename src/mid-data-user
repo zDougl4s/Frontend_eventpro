@@ -1,0 +1,154 @@
+mid-data-user
+<div class=row
+<div col-1...12
+
+col-1...12
+
+col-xs
+col-sm
+col-md
+col-lg
+col-xl
+
+
+mid-data-user
+<div col-xs-12 col-sm-8 col-md-6 col-lg-4 col-xl-3>
+    <p> Douglas dasdaskldjaskdjasdjlkasjdjsaldkjaskldlaksjdsdlkajdjaskldjalkjdklasjdlkasjdklasjdkljkdjklsdjal
+    <div col-3></div>
+    <div col-6>
+    data user
+   <div col-3></div>
+my account
+
+
+my_account 
+update_user: false
+
+if this is false ? mid-data-user : all_update_user
+
+
+
+
+
+
+            <div className='text-align'>
+                {this.props.user.username ? <Redirect push to="/"/> : null}
+                <h2>Sign up</h2>
+                <div className='Login'>
+                    <form onSubmit={this.handleSubmit}>
+                    <label>Username</label>
+                        <input id="username"
+                        onChange={this.handleInputChange}
+                        value={this.state.username}
+                        placeholder='Username' 
+                        />
+                    <br></br>
+                    <label>password</label>
+                    <input type="password" id="password"
+                    onChange={this.handleInputChange}
+                    value={this.state.password} placeholder='password'
+                    />
+                    <br></br>
+                    <label>Name</label>
+                    <input id="name"
+                    onChange={this.handleInputChange}
+                    value={this.state.name} placeholder='name'
+                    />
+                    <br></br>
+                    <label>Email</label>
+                    <input type="email" id="email"
+                    onChange={this.handleInputChange}
+                    value={this.state.email} placeholder='email'
+                    />
+                    <br></br>
+                    <button type='submit'>Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+
+ all_update_user
+
+ div col 6
+    data user
+
+div col 6
+
+form to update
+
+
+
+
+            <div className='text-align'>
+                <h2>Update my information</h2>
+                <form onSubmit={this.handleSubmit}>
+                    <label>Username</label>
+                        <input
+                            id="username"
+                            onChange={this.handleChange}
+                            value={this.state.username}
+                            placeholder='Username'
+                        />
+                    <br></br>
+                    <label>Name</label>
+                    <input
+                        id="name"
+                        onChange={this.handleChange}
+                        value={this.state.name}
+                        placeholder='name'
+                    />
+                    <br></br>
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        onChange={this.handleChange}
+                        value={this.state.email} placeholder='email'
+                    />
+                    <br></br>
+                    <button type='submit'>Submit</button>
+                    </form>
+            </div>
+
+
+
+             <div className='text-align'>
+                <h3>My account</h3>
+                <h3>Username:{this.props.user.username}</h3>
+                <h3>Name:{this.props.user.name}</h3>
+                <h3>Email:{this.props.user.email}</h3>
+            <Link to='/updatedetails'>
+            <button>
+                Update details
+            </button>
+            </Link>
+            </div>
+
+
+
+            event card    
+             <div className="col-md-6">
+        <div className="card card-width">
+            <img className="card-img-top img-size" alt="event" src={this.props.event.img_url}/>
+            <div className="card-body">
+                <h5 className="card-title">{this.props.event.name}</h5>
+                <p className="card-text">{this.props.event.bio}</p>
+                <p className="card-text">£{this.props.event.price}</p>
+                <p className="card-text">tickets available: {this.props.event.buy_entry}</p>
+        </div>
+        {this.props.user == null  ? <button className="btn btn-primary">click here log in to reserve a ticket</button> : null}
+        {this.props.user !== null  ?  <button  className="btn btn-primary float-r mar-t-50" onClick={this.handleBuyTicket(this.props.userId, this.props.event.id)}>Get a ticket</button> :null }
+            </div>
+    </div>
+
+
+    <div>
+                Event Name{this.state.eventName}
+                <img alt="events" src={this.state.eventImg} width="4%" alt='Event Image' />
+                <Link to='/myTickets'> 
+                <button onClick={this.handleDelete}>
+                    delete
+                </button>
+                </Link>
+            </div>

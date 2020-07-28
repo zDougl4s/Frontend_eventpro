@@ -1,22 +1,6 @@
-// import React, { Component } from 'react'
-
-
-
-// export default function MyAccount ( { user } ) {
-    
-//     return (
-//         <div className='text-align'>
-//             <h3>My account</h3>
-//             <h3>{user.name}</h3>
-//             <h3>{user.username}</h3>
-//             <h3>{user.email}</h3>
-//         </div>
-//     )
-
-// }
+import { Link } from "react-router-dom";
 import React, { Component } from 'react'
-import UpdateDetails from './UpdateDetails'
-import {Link} from 'react-router-dom';
+
 
 export default class MyAccount extends Component {
     state = {
@@ -26,7 +10,7 @@ export default class MyAccount extends Component {
     }
 
     componentDidMount(){
-        if(!this.props.user.id == 0){
+        if(!this.props.user.id === 0){
             this.setState({
                 name: this.props.user.name,
                 username: this.props.user.username,
@@ -38,17 +22,58 @@ export default class MyAccount extends Component {
 
     render() {
         return (
-            <div className='text-align'>
-                <h3>My account</h3>
-                <h3>Username:{this.props.user.username}</h3>
-                <h3>Name:{this.props.user.name}</h3>
-                <h3>Email:{this.props.user.email}</h3>
-            <Link to='/updatedetails'>
-            <button>
-                Update details
-            </button>
-            </Link>
-            </div>
+           
+<body>
+<div class="container">
+{/* {this.props.user.username ? <Redirect push to="/myAccount"/> : null} */}
+    <div class="row main">
+        <div class="main-login main-center">
+        <h5></h5> 
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Your Username</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class=""
+                            id="username"
+                            value={this.state.username}
+                            placeholder={this.props.user.username}/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="" aria-hidden=""></i></span>
+                            <input  class="" name="email"   placeholder={this.props.user.email}
+                            type="email" id="email"
+                            value={this.state.email} />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="" name="username"  placeholder={this.props.user.name}
+                            id="name"
+                            onChange={this.handleChange}
+                            value={this.state.name} />
+                            
+                        </div>
+                        <Link to='/updatedetails'>
+                        <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Update details</button>
+                        </Link>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </body>
         )
     }
 }
