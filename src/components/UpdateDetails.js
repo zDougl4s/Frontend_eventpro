@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { updateUser } from '../API';
-import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default class UpdateDetails extends Component {
@@ -24,18 +23,15 @@ export default class UpdateDetails extends Component {
     handleSubmit = (event) => {
         alert("Your details has been update")
         event.preventDefault();
-        event.target.reset();
+        // event.target.reset();
         const { setUser } = this.props
-
         const { id, username, name, email } = this.state;
         const userData = { username, name, email };
-
         updateUser(id, userData, setUser)
     }
 
     render() {
         return (
-
 <body>
 <div class="container">
     <div class="row main">
@@ -109,9 +105,9 @@ export default class UpdateDetails extends Component {
                 </div>
 
                 <div class="form-group ">
-                {/* <Link to='/myAccount'>  */}
+                <Link to='/myAccount'> 
                     <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Update new Details</button>
-                {/* </Link> */}
+                </Link>
                 </div>
                 
             </form>
