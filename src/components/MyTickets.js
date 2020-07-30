@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {userTickets} from '../API'
 import TicketCard from './TicketCard'
 
 export default class MyTickets extends Component {

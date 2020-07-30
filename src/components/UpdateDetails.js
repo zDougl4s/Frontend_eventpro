@@ -105,8 +105,9 @@ export default class UpdateDetails extends Component {
                 </div>
 
                 <div class="form-group ">
-                <Link to='/myAccount'> 
                     <button type="submit" id="button" class="btn btn-primary btn-lg btn-block login-button">Update new Details</button>
+                <Link to='/myAccount'> 
+                    <button  id="button" class="btn btn-primary btn-block ">Return</button>
                 </Link>
                 </div>
                 

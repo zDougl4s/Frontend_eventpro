@@ -31,7 +31,7 @@ export default class Login extends Component {
 
  <body>
 <div class="container">
-{this.props.user.username ? <Redirect push to="/"/> : null}
+{this.props.user.username ? <Redirect push to="/events"/> : null}
     <div class="row main">
         <div class="main-login main-center">
         <h5>Sign up once and search for Events.</h5>

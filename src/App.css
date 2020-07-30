@@ -450,3 +450,132 @@ h1
     font-size: 75%
   }
 }
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:900");
+
+
+
+
+
+/* home */
+.alrazy-title {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 100em !important;
+  font-size: calc( 1000vw / var(--char-total) ) !important;
+  position: relative;
+  padding: 5em 0;
+  overflow: hidden;
+}
+.alrazy-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: solid 1em;
+  -webkit-animation: underline 1s cubic-bezier(0.8, 0, 0, 1);
+          animation: underline 1s cubic-bezier(0.8, 0, 0, 1);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes underline {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+@keyframes underline {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+.alrazy-title .word {
+  display: inline-block;
+  -webkit-animation: slide-up 1.25s cubic-bezier(0.5, 0.2, 0, 1);
+          animation: slide-up 1.25s cubic-bezier(0.5, 0.2, 0, 1);
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: calc( .5s + (.1s * var(--word-index)) );
+          animation-delay: calc( .5s + (.1s * var(--word-index)) );
+}
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
+  }
+}
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(125%);
+            transform: translateY(125%);
+  }
+}
+.splitting-mark {
+  color: #FFF !important;
+}
+/* buttons */
+body{
+  margin: 0;
+  padding: 50;
+  font-family:sans-serif;
+  height: 100vh;
+
+}
+
+.main{
+  position: absolute;
+ top:50%;
+ left:50%;
+ transform: translate(-50%, -50%);
+}
+.a1{
+  margin:30px;
+  position: relative;
+  background: linear-gradient(to right, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+  background-size:1000%;
+  border-radius:50px;
+  display :inline-block;
+  width: 500px;
+  height: 300px;
+  line-height:300px;
+  text-align:center;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  color:#fff;
+  font-size:20px;
+}
+
+.a1:hover{
+  animation:  a  8s linear Infinite;
+}
+.a1:before{
+ content:"";
+ background: linear-gradient(to   right,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+background-size:400%;
+position: absolute;
+top:-5px;
+right: -5px;
+left: -5px;
+bottom:-5px;
+z-index: -1;
+border-radius:80px;
+filter: blur(20px);
+opacity: 0;
+transition:0.5s;
+}
+.a1:hover:before{
+opacity: 1;
+filter: blur(20px);
+animation:  a  8s linear Infinite;
+}
+@keyframes a {
+0%{
+  background-position: 0%;
+}
+100%{
+  background-position: 400%;
+}
+}

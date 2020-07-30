@@ -46,7 +46,7 @@ export default class MyAccount extends Component {
                     <label for="email" class="cols-sm-2 control-label">Your Email</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="" aria-hidden=""></i></span>
+                            <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
                             <input  class="" name="email"   placeholder={this.props.user.email}
                             type="email" id="email"
                             value={this.state.email} />
